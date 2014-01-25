@@ -32,14 +32,3 @@ if mdt.is_final_state?
   puts "MdT found a final state after #{mdt.step_count} step"
 end
 
-exit
-
-while rule = mdt.step do
-  puts "***** STEP #{mdt.step_count} *****"
-  puts "Applyed #{rule}"
-  puts mdt.status
-  if rule.fstate.is_final?
-    puts "MdT found a final state after #{mdt.step_count} step"
-  end
-  puts "******************"
-end
